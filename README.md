@@ -23,7 +23,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 OOP school library <a name="about-project"></a>
+# 📖 OOP School Library <a name="about-project"></a>
 
 **OOP school library** a tool that allows librarian to record what books are in the library and who borrows them. More specifically, the app will allow you to:
 > - Add new students or teachers.
