@@ -37,5 +37,11 @@ class Person
     return true if @age >= 18
     false
   end
-  private :of_age  
+  private :of_age
+
+  # public method
+  def can_use_services?
+    return true if of_age || @parent_permission
+  end
+   
 end
