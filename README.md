@@ -1,7 +1,8 @@
 <a name="readme-top"></a>
 
 # 📗 Table of Contents
-- [📖 About ](#-oop-school-library-)
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 OOP School Library ](#-oop-school-library-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -139,7 +140,7 @@ In the future work,
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Microverse-Fullstack-Program/school_library).
+Feel free to check the [issues page](https://github.com/Microverse-Fullstack-Program/school_library/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -173,6 +174,6 @@ I would like to thank [Microverseinc](https://github.com/microverseinc/curriculu
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE.md) licensed.
+This project is [MIT](./LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
