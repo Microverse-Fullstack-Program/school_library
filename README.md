@@ -156,7 +156,8 @@ Feel free to check the [issues page](https://github.com/Microverse-Fullstack-Pro
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank [Microverseinc](https://github.com/microverseinc/curriculum-ruby/blob/main/oop/school_library_people.md) for the project requirment.
+I would like to thank [Microverseinc: OOP school library: add Person, Student and Teacher classes
+](https://github.com/microverseinc/curriculum-ruby/blob/main/oop/school_library_people.md) for the project requirment.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
