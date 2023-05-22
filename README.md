@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 # 📗 Table of Contents
-- [📖 OOP school library ](#-oop-school-library-)
+- [📖 About ](#-oop-school-library-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
