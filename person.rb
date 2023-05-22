@@ -31,5 +31,11 @@ class Person
   def age=(age)
     @age = age
   end
-  
+
+  # private method
+  def of_age?
+    return true if @age >= 18
+    false
+  end
+  private :of_age  
 end
