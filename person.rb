@@ -6,4 +6,18 @@ class Person
     @parent_permission = parent_permission
   end
 
+  # getter methods
+  def id
+    @id
+  end
+
+  def name
+    @name
+  end
+
+  def age
+    @age
+  end
+
+  
 end
