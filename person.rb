@@ -19,5 +19,17 @@ class Person
     @age
   end
 
+  # setter methods
+  def id=(id)
+    @id=id
+  end
+
+  def name=(name)
+    @name = name
+  end
+
+  def age=(age)
+    @age = age
+  end
   
 end
