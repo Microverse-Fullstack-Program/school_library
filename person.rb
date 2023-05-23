@@ -1,6 +1,6 @@
-require_relative './Nameable'
-require_relative './CapitalizeDecorator'
-require_relative './TrimmerDecorator'
+require_relative './nameable'
+require_relative './capitalize_decorator'
+require_relative './trimmer_decorator'
 
 class Person < Nameable
   attr_accessor :name, :age # getter & setter method
@@ -34,8 +34,8 @@ end
 person = Person.new(22, 'maximilianus')
 puts person.correct_name
 
-capitalizedPerson = CapitalizeDecorator.new(person)
-puts capitalizedPerson.correct_name
+capitalizedperson = CapitalizeDecorator.new(person)
+puts capitalizedperson.correct_name
 
-capitalizedTrimmedPerson = TrimmerDecorator.new(capitalizedPerson)
-puts capitalizedTrimmedPerson.correct_name
+capitalizedtrimmedperson = TrimmerDecorator.new(capitalizedperson)
+puts capitalizedtrimmedperson.correct_name
