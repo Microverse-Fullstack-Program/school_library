@@ -4,7 +4,7 @@ require_relative './trimmer_decorator'
 
 class Person < Nameable
   attr_accessor :name, :age # getter & setter method
-  attr_reader :id # getter method
+  attr_reader :id, :rentals # getter method
 
   def initialize(age, name = 'Unknown', parent_permission: true)
     super()
@@ -12,6 +12,7 @@ class Person < Nameable
     @name = name
     @age = age
     @parent_permission = parent_permission
+    @rentals = []
   end
 
   # private method
@@ -29,6 +30,11 @@ class Person < Nameable
 
   def correct_name
     @name
+  end
+
+  def add_rental(rental)
+    @rentals.push(rental)
+    rental.person = self
   end
 end
 
