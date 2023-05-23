@@ -2,7 +2,7 @@ require_relative './base_decorator'
 
 class CapitalizeDecorator < BaseDecorator
   def initialize(nameable)
-    @nameable = nameable
+    super(nameable)
   end
 
   def correct_name
