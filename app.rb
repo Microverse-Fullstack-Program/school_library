@@ -8,6 +8,11 @@ $teachers = []
 $students = []
  
 
+def list_books
+    $books.each do |book| puts "Title: \"#{book.title}\", Author: #{book.author}" end
+    main(false)
+end
+ 
 def create_teacher
     print 'Age: '
     age = gets.chomp
