@@ -6,6 +6,7 @@ require_relative './rental'
 $books = []
 $teachers = []
 $students = []
+ 
 
 def create_teacher
     print 'Age: '
@@ -19,6 +20,19 @@ def create_teacher
     main(false)
 end
 
+def create_student
+    print 'Age: '
+    age = gets.chomp
+    print 'Name: '
+    name = gets.chomp
+    print 'Has parent permission? (Y/N): '
+    permission = gets.chomp
+    permission = permission == 'Y' ? true : false
+    $students << Student.new(nil, age, name, permission)
+    puts 'Person created successfully: '
+    main(false)
+end
+
 def create_book
     print 'Title: '
     title = gets.chomp
@@ -28,3 +42,4 @@ def create_book
     puts 'Book created successfully: '
     main(false)
 end
+
