@@ -12,7 +12,13 @@ def list_books
     $books.each do |book| puts "Title: \"#{book.title}\", Author: #{book.author}" end
     main(false)
 end
- 
+
+def list_people
+    $students.each do |student| puts "[Student] Name: #{student.name}, ID: #{student.id}, Age: #{student.age}" end
+    $teachers.each do |teacher| puts "[Teacher] Name: #{teacher.name}, ID: #{teacher.id}, Age: #{teacher.age}"  end
+    main(false)
+end
+
 def create_teacher
     print 'Age: '
     age = gets.chomp
