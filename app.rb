@@ -72,3 +72,8 @@ def create_rental
     main(false)
 end
 
+def list_rental(id)
+    puts 'Rentals:'
+    $rentals.each do |rental| puts "Date: #{rental.date}, Book \"#{rental.book.title}\" by #{rental.book.author}" if rental.person.id == id end
+    main(false)
+end
