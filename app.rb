@@ -6,7 +6,7 @@ require_relative './rental'
 $books = []
 $teachers = []
 $students = []
- 
+$rentals = []
 
 def list_books
     $books.each do |book| puts "Title: \"#{book.title}\", Author: #{book.author}" end
@@ -51,6 +51,24 @@ def create_book
     author = gets.chomp
     $books << Book.new(title, author)
     puts 'Book created successfully: '
+    main(false)
+end
+
+def create_rental
+    puts 'Select a book from the following list by number'
+    $books.each_with_index do |book, index| puts "#{index}) Title: \"#{book.title}\", Author: #{book.author}" end
+    book = gets.chomp.to_i
+
+    puts 'Select a person from the following list by number (not id)'
+    $students.each_with_index do |student, index| puts "#{index}) [Student] Name: #{student.name}, ID: #{student.id}, Age: #{student.age}" end
+    $teachers.each_with_index do |teacher, index| puts "#{index + $students.length}) [Teacher] Name: #{teacher.name}, ID: #{teacher.id}, Age: #{teacher.age}" end
+    person = gets.chomp.to_i
+
+    print 'Date: '
+    date = gets.chomp
+
+    $rentals << Rental.new(date, $books[book], $students[person] || $teachers[person - $students.length])
+    puts 'Rental created successfully:'
     main(false)
 end
 
