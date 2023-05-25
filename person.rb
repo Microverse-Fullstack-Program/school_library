@@ -6,7 +6,7 @@ class Person < Nameable
   attr_accessor :name, :age # getter & setter method
   attr_reader :id, :rentals # getter method
 
-  def initialize(age, name = 'Unknown', parent_permission: true)
+  def initialize(age, name = 'Unknown', parent_permission = true)
     super()
     @id = Random.rand(1..1000)
     @name = name
@@ -18,7 +18,6 @@ class Person < Nameable
   # private method
   def of_age?
     return true if @age >= 18
-
     false
   end
   private :of_age?
@@ -38,6 +37,7 @@ class Person < Nameable
   end
 end
 
+=begin
 person = Person.new(22, 'maximilianus')
 puts person.correct_name
 
@@ -46,3 +46,4 @@ puts capitalizedperson.correct_name
 
 capitalizedtrimmedperson = TrimmerDecorator.new(capitalizedperson)
 puts capitalizedtrimmedperson.correct_name
+=end
