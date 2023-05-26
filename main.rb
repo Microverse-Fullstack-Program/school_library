@@ -69,7 +69,6 @@ class Main
       puts 'Invalid option, try again!'
     end
   end
-
 end
 
 main_app = Main.new
