@@ -3,7 +3,7 @@ require_relative './capitalize_decorator'
 require_relative './trimmer_decorator'
 
 class Person < Nameable
-  attr_accessor :name, :age # getter & setter method
+  attr_accessor :name, :age, :parent_permission # getter & setter method
   attr_reader :id, :rentals # getter method
 
   def initialize(age, name = 'Unknown', parent_permission: true)
@@ -37,12 +37,3 @@ class Person < Nameable
     rental.person = self
   end
 end
-
-person = Person.new(22, 'maximilianus')
-puts person.correct_name
-
-capitalizedperson = CapitalizeDecorator.new(person)
-puts capitalizedperson.correct_name
-
-capitalizedtrimmedperson = TrimmerDecorator.new(capitalizedperson)
-puts capitalizedtrimmedperson.correct_name
