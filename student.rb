@@ -10,6 +10,7 @@ class Student < Person
 
   def play_hooky
     '¯(ツ)/¯'
+    @classroom
   end
 
   def classroom=(classroom)
@@ -17,3 +18,7 @@ class Student < Person
     classroom.students.push(self) unless classroom.students.include?(self)
   end
 end
+
+student = Student.new('B', 10, 'John Doe')
+student.classroom = 'class410'
+puts student.play_hooky
