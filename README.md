@@ -132,10 +132,6 @@ You can deploy this project using: **Not available**.
 ## 🔭 Future Features <a name="future-features"></a>
 
 In the future work, 
-- [ ] **Use the "Decorator" design pattern**
-- [ ] **Set up associations**
-- [ ] **Add basic UI**
-- [ ] **Preserve data**
 - [ ] **Unit tests**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
