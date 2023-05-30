@@ -2,12 +2,12 @@ require_relative './call_action'
 
 class Main
   def initialize
-    @action = CallAction.new
+    @choice_action = CallAction.new
   end
 
   def main()
     puts 'Welcome to School Library App!'
-
+  
     loop do
       puts "\n"
       options = [
@@ -19,10 +19,14 @@ class Main
         '6 - List all rentals for a given person id',
         '7 - Exit'
       ]
-    
+
       puts options
       choice = gets.chomp.to_i
-      @action.action(choice)
+      if choice == 7
+        puts 'Thank You for using this app!'
+        exit 0
+      end
+      @choice_action.call_action(choice)
     end
   end
 end
