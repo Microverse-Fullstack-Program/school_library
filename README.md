@@ -120,6 +120,12 @@ You can deploy this project using: **Not available**.
 - Twitter: [@twitterhandle](https://twitter.com/Chere21271613)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/chere-lemma27211613)
 
+👤 **Henry Omondi**
+
+- GitHub: [@githubhandle](https://github.com/Odongo006)
+- Twitter: [@twitterhandle](twitter.com/HenryOdongo007)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/henry-odongo/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
