@@ -38,4 +38,29 @@ module WriteToFile
     file.write(JSON.pretty_generate(person_hash))
     file.close
   end
+
+  # write rentals record to JSON file
+  def write_rental(rentals)
+    file = File.open('./data/rental.json', 'w+')
+
+    rental_hash = {}
+    rentals.each_with_index do |rental, index|
+      rental_hash[(index + 1).to_s] = {
+        'date' => rental.date,
+        'book' => { 'title' => rental.book.title, 'author' => rental.book.author },
+        'person' => { 'id' => rental.person.id, 'name' => rental.person.name, 'age' => rental.person.age }
+      }
+      if rental.person.instance_of?(Student)
+        rental_hash[(index + 1).to_s]['person']['classroom'] =
+          rental.person.classroom
+      end
+      if rental.person.instance_of?(Teacher)
+        rental_hash[(index + 1).to_s]['person']['specialization'] =
+          rental.person.specialization
+      end
+    end
+
+    file.write(JSON.pretty_generate(rental_hash))
+    file.close
+  end
 end
