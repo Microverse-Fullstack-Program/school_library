@@ -22,9 +22,9 @@ module CreateRental
     puts 'Select a book from the following list by number'
     @books.each_with_index { |book, index| puts "#{index}) Title: \"#{book.title}\", Author: #{book.author}" }
     b_index = gets.chomp
-    return b_index.to_i unless b_index.empty? || b_index.to_i > @persons.length || b_index.to_i.negative?
+    return b_index.to_i unless b_index.empty? || b_index.to_i > @books.length || b_index.to_i.negative?
 
-    puts 'Invalid person selection, try again!'
+    puts 'Invalid book selection, try again!'
     nil
   end
 
@@ -37,11 +37,9 @@ module CreateRental
       puts "Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
     end
     p_index = gets.chomp
-    if p_index.empty? || p_index.to_i > @books.length || p_index.to_i.negative?
-      puts 'Invalid book selection, try again!'
-      nil
-    else
-      p_index.to_i
-    end
+    return p_index.to_i unless p_index.empty? || p_index.to_i > @persons.length || p_index.to_i.negative?
+
+    puts 'Invalid person selection, try again!'
+    nil
   end
 end
