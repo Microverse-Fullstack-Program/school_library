@@ -1,6 +1,11 @@
 require_relative 'app'
+require_relative './modules/write_to_file'
+require_relative './modules/read_from_file'
 
 class CallAction
+  include ReadFromFile
+  include WriteToFile
+
   def initialize
     @app = App.new
   end
@@ -37,5 +42,17 @@ class CallAction
     else
       puts 'Invalid option, try again!'
     end
+  end
+
+  def load_data
+    read_book(@app.books)
+    read_person(@app.persons)
+    read_rental(@app.rentals, @app.books, @app.persons)
+  end
+
+  def preserve_data
+    write_book(@app.books)
+    write_person(@app.persons)
+    write_rental(@app.rentals)
   end
 end

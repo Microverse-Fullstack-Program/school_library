@@ -8,13 +8,13 @@ class Main
   def main()
     puts 'Welcome to School Library App!'
 
+    @choice_action.load_data # call a method that load data from file
+
     loop do
       puts "\n"
       options = [
-        '1 - List all books',
-        '2 - List all people',
-        '3 - Create a person',
-        '4 - Create a book',
+        '1 - List all books', '2 - List all people',
+        '3 - Create a person', '4 - Create a book',
         '5 - Create a rental',
         '6 - List all rentals for a given person id',
         '7 - Exit'
@@ -23,6 +23,7 @@ class Main
       puts options
       choice = gets.chomp.to_i
       if choice == 7
+        @choice_action.preserve_data
         puts 'Thank You for using this app!'
         exit 0
       end
