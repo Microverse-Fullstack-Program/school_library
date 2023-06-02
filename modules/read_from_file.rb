@@ -34,4 +34,19 @@ module ReadFromFile
                              parent_permission: person['parent_permission'])
     end
   end
+
+  # load rentals record from file
+  def read_rental(rentals, books, persons)
+    file = File.open('./data/rental.json', 'r') if File.exist?('./data/rental.json')
+    return false if file.nil?
+
+    return unless file.size.positive?
+
+    rentals_record = JSON.parse(file.read)
+    rentals_record.each do |_key, rental|
+      book = books.find { |b| b.title == rental['book']['title'] }
+      person = persons.find { |p| p.name == rental['person']['name'] }
+      rentals << Rental.new(rental['date'], book, person)
+    end
+  end
 end
