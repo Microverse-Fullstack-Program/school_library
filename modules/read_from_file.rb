@@ -16,4 +16,22 @@ module ReadFromFile
           books << Book.new(book['title'], book['author'])
         end
       end
+
+      # load persons record from file
+  def read_person(persons)
+    file = File.open('./data/person.json', 'r') if File.exist?('./data/person.json')
+    return false if file.nil?
+
+    return unless file.size.positive?
+
+    person_record = JSON.parse(file.read)
+    person_record['students'].each do |_key, person|
+      persons << Student.new(person['classroom'], person['age'], person['name'],
+                             parent_permission: person['parent_permission'])
+    end
+    person_record['teachers'].each do |_key, person|
+      persons << Teacher.new(person['specialization'], person['age'], person['name'],
+                             parent_permission: person['parent_permission'])
+    end
+  end
 end
