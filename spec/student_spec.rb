@@ -37,11 +37,13 @@ describe Student do
 
   context 'miscellaneous' do
     it 'returns a shrug emoji when the student plays hooky' do
-    expect(@student.play_hooky).to eql '¯(ツ)/¯' 
+      expect(@student.play_hooky).to eql '¯(ツ)/¯'
     end
 
     it 'notifies upon student creation' do
-      expect { Student.new('class', 17, 'Alice', parent_permission: false) }.to output("Student Alice enrolled\n").to_stdout
+      expect do
+        Student.new('class', 17, 'Alice', parent_permission: false)
+      end.to output("Student Alice enrolled\n").to_stdout
     end
   end
 end

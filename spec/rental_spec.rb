@@ -36,7 +36,7 @@ describe Rental do
       sample_book = Book.new 'DS', 'Lorem ipsum'
       sample_person = Teacher.new 26, 'Jonh Doe', 'JS'
       sample_rental = Rental.new '2023-04-26', sample_book, sample_person
-  
+
       expect(sample_person.rentals.length).to eq 1
       expect(sample_book.rentals.length).to eq 1
       expect(sample_person.rentals).to eql [sample_rental]
@@ -46,7 +46,7 @@ describe Rental do
       sample_book = Book.new 'DS', 'Lorem ipsum'
       sample_person = Teacher.new 26, 'Jonh Doe', 'JS'
       sample_rental = Rental.new '2023-04-26', sample_book, sample_person
-      
+
       expect(sample_person.rentals.length).to eq 1
       expect(sample_book.rentals.length).to eq 1
       expect(sample_person.rentals).to eql [sample_rental]

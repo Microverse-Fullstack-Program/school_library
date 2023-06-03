@@ -9,7 +9,7 @@ describe Teacher do
     it 'instantiate an object ' do
       expect(@teacher).to be_instance_of(Teacher)
     end
-  
+
     it 'returns the student age' do
       expect(@teacher.age).to eql 30
     end
